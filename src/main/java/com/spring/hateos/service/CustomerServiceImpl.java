@@ -4,16 +4,23 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import org.slf4j.Logger;
+/*import org.slf4j.Logger;*/
 import org.springframework.stereotype.Service;
-
+import lombok.extern.slf4j.Slf4j;
 import com.spring.hateos.entity.Customer;
 
+@Slf4j
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
+	Logger logger = org.slf4j.LoggerFactory.getLogger(CustomerServiceImpl.class);
+    
     private HashMap<String, Customer> customerMap;
 
     public CustomerServiceImpl() {
+    	
+    	logger.warn("Hello World");
 
         customerMap = new HashMap<>();
 
@@ -29,6 +36,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public List<Customer> allCustomers() {
+    	//Logger.debug("IN ABC");
         return new ArrayList<>(customerMap.values());
     }
 

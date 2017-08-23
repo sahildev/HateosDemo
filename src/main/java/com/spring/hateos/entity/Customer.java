@@ -3,7 +3,8 @@ package com.spring.hateos.entity;
 import java.util.Map;
 
 public class Customer {
-    private String customerId;
+    
+	private String customerId;
     private String customerName;
     private String companyName;
     private Map<String, Order> orders;
@@ -50,5 +51,11 @@ public class Customer {
     public void setOrders(final Map<String, Order> orders) {
         this.orders = orders;
     }
+    
+    @Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", companyName=" + companyName
+				+ "]";
+	}
 
 }
