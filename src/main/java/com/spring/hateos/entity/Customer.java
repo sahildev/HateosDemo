@@ -2,9 +2,7 @@ package com.spring.hateos.entity;
 
 import java.util.Map;
 
-import org.springframework.hateoas.ResourceSupport;
-
-public class Customer extends ResourceSupport {
+public class Customer {
     private String customerId;
     private String customerName;
     private String companyName;

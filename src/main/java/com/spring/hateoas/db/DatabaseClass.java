@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.spring.hateos.entity.Customer;
 
+@Deprecated
 public class DatabaseClass {
 	
 	private static Map<String,Customer> customer = new HashMap<>();

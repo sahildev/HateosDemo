@@ -54,7 +54,7 @@ public class OrderServiceImpl implements OrderService {
 		final List<Order> orders = (List<Order>) customerMap.get(customerId).getOrders().values();
 		Order selectedOrder = null;
 		for (final Order order : orders) {
-			if (order.getId().equals(orderId)) {
+			if (order.getOrderId().equals(orderId)) {
 				selectedOrder = order;
 			}
 		}

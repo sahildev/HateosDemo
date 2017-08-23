@@ -1,8 +1,6 @@
 package com.spring.hateos.entity;
 
-import org.springframework.hateoas.ResourceSupport;
-
-public class Order extends ResourceSupport {
+public class Order {
     private String orderId;
     private double price;
     private int quantity;
